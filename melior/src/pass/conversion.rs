@@ -21,7 +21,7 @@ melior_macro::conversion_passes!(
     mlirCreateConversionConvertGpuOpsToROCDLOps,
     mlirCreateConversionConvertGPUToSPIRV,
     mlirCreateConversionConvertIndexToLLVMPass,
-    mlirCreateConversionConvertLinalgToLLVMPass,
+    // mlirCreateConversionConvertLinalgToLLVMPass,
     mlirCreateConversionConvertLinalgToStandard,
     mlirCreateConversionConvertMathToFuncs,
     mlirCreateConversionConvertMathToLibm,

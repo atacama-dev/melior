@@ -3,7 +3,7 @@
 melior_macro::passes!(
     "SparseTensor",
     [
-        mlirCreateSparseTensorPostSparsificationRewrite,
+        // mlirCreateSparseTensorPostSparsificationRewrite,
         mlirCreateSparseTensorPreSparsificationRewrite,
         mlirCreateSparseTensorSparseBufferRewrite,
         mlirCreateSparseTensorSparseTensorCodegen,

@@ -38,8 +38,8 @@ pub fn opaque_pointer(context: &Context) -> Type {
 }
 
 /// Creates an LLVM pointer type.
-pub fn pointer(r#type: Type, address_space: u32) -> Type {
-    unsafe { Type::from_raw(mlirLLVMPointerTypeGet(r#type.to_raw(), address_space)) }
+pub fn pointer(context: &Context, address_space: u32) -> Type {
+    unsafe { Type::from_raw(mlirLLVMPointerTypeGet(context.to_raw(), address_space)) }
 }
 
 /// Creates an LLVM struct type.
