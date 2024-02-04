@@ -17,8 +17,6 @@ use quote::quote;
 use std::{env, fmt::Display, path::Path, process::Command, str};
 use tblgen::{record::Record, record_keeper::RecordKeeper, TableGenParser};
 
-const LLVM_MAJOR_VERSION: usize = 17;
-
 pub fn generate_dialect(input: DialectInput) -> Result<TokenStream, Box<dyn std::error::Error>> {
     let mut parser = TableGenParser::new();
 
@@ -90,7 +88,7 @@ fn generate_dialect_module(
 }
 
 fn llvm_config(argument: &str) -> Result<String, Box<dyn std::error::Error>> {
-    let prefix = env::var(format!("MLIR_SYS_{}0_PREFIX", LLVM_MAJOR_VERSION))
+    let prefix = env::var("LLVM_PREFIX")
         .map(|path| Path::new(&path).join("bin"))
         .unwrap_or_default();
     let call = format!(

@@ -25,7 +25,7 @@ melior_macro::dialect! {
 }
 melior_macro::dialect! {
     name: "arm_sve",
-    table_gen: r#"include "mlir/Dialect/ArmSVE/ArmSVE.td""#
+    table_gen: r#"include "mlir/Dialect/ArmSVE/IR/ArmSVE.td""#
 }
 melior_macro::dialect! {
     name: "async",
